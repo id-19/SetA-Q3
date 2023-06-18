@@ -1,0 +1,53 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+div#container1{
+    width:75vh;
+    height:75vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    div{
+        width:50%;
+        height:50%;
+        z-index: 1;
+        transition: 500ms ease-in-out;
+    }
+}
+#container1:hover{
+    #top-right{
+        transform: rotate(-90deg);
+    }
+    #top-left{
+        transform: rotate(90deg);
+    }
+    #bottom-right{
+        transform: rotate(90deg);
+    }
+    #bottom-left{
+        transform: rotate(-90deg);
+    }
+}
+#top-right{
+    background-color: yellow;
+    transform-origin: top right;
+}
+#top-left{
+    transform-origin: top left;
+    background-color: red;
+}
+#bottom-right{
+    transform-origin: bottom right;
+    background-color: green;
+}
+#bottom-left{
+    transform-origin: bottom left;
+    background-color: blue;
+}
+h1{
+    position: relative;
+    bottom: 42vh;
+}
